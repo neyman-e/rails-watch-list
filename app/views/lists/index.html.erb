@@ -1,0 +1,9 @@
+<h2 class="m-3">All lists</h2>
+<ul class="list-group">
+<% @lists.each do |list| %>
+  <li class="list-group-item my-1">
+    <%= link_to list.name, list_path(list) %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'Create new list', new_list_path, class:'btn btn-primary my-1' %>
